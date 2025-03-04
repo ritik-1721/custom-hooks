@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 const SYSTEM_TOKEN = null;
 
-const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false, dependencies = [] }) => {
+const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(autoFetch);
   const [error, setError] = useState(null);
@@ -9,7 +9,7 @@ const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false, de
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/login"; // Redirect to login page
+    window.location.href = "/login";
   };
 
   const fetchData = useCallback(
@@ -56,7 +56,7 @@ const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false, de
         setLoading(false);
       }
     },
-    [URL, options, systemToken, ...dependencies]
+    [URL, options, systemToken]
   );
 
   useEffect(() => {
