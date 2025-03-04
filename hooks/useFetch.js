@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 const SYSTEM_TOKEN = null;
 
-const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false }) => {
+const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false , dependencies = [] }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(autoFetch);
   const [error, setError] = useState(null);
@@ -56,7 +56,7 @@ const useFetch = ({ URL, options = {}, autoFetch = true, systemToken = false }) 
         setLoading(false);
       }
     },
-    [URL, options, systemToken]
+    [URL, options, systemToken, ...dependencies]
   );
 
   useEffect(() => {
