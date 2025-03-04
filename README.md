@@ -13,6 +13,12 @@ A custom React hook for fetching data with support for authentication, request c
 
 ## Installation
 
+You can download and use the `useFetch` hook using the following command:
+
+```sh
+npx shx curl -o src/hooks/useFetch.js "https://raw.githubusercontent.com/ritik-1721/custom-hooks/main/hooks/useFetch.js"
+```
+
 Simply copy the `useFetch.js` file into your project and import it where needed.
 
 ```javascript
