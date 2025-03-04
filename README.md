@@ -128,7 +128,7 @@ export default SubmitForm;
 
 ## API Reference
 
-### `useFetch({ URL, options, autoFetch, systemToken, dependencies })`
+### `useFetch({ URL, options, autoFetch, systemToken })`
 
 | Parameter    | Type    | Default | Description |
 |-------------|--------|---------|-------------|
@@ -136,7 +136,6 @@ export default SubmitForm;
 | `options`   | object | `{}`    | Fetch request options (method, headers, etc.). |
 | `autoFetch` | bool   | `true`  | Whether to fetch data automatically on mount. |
 | `systemToken` | bool   | `false` | Use a system-wide authentication token. |
-| `dependencies` | array | `[]`    | Dependencies that trigger re-fetch when changed. |
 
 ### Return Values
 
