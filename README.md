@@ -156,6 +156,60 @@ export default SubmitForm;
 
 ---
 
+
+# useQueryParams
+
+A custom React hook for manage query param and state values.
+
+## Features
+- Converts JSON to query parameters.
+- Manages query parameters in React Router.
+- Updates query parameters without affecting other state values.
+
+## Installation
+
+You can download and use the `useQueryParams` hook using the following command:
+
+Ensure you have `react-router-dom` installed:
+
+```sh
+npm install react-router-dom
+```
+
+```sh
+npx shx curl -o src/hooks/useQueryParams.js "https://raw.githubusercontent.com/ritik-1721/custom-hooks/main/hooks/useQueryParams.js"
+```
+
+Simply copy the `useQueryParams.js` file into your project and import it where needed.
+
+```javascript
+import useQueryParams from "./useQueryParams";
+```
+
+---
+
+## Usage
+
+```javascript
+import { useLocation, useNavigate } from "react-router-dom";
+import useQueryParams from "./useQueryParams";
+
+const MyComponent = () => {
+  const { queryParams, updateQueryParam, updateQueryParams, updateRouteState } = useQueryParams();
+
+  return (
+    <div>
+      <p>Current Query: {queryParams.get("search")}</p>
+      <button onClick={() => updateQueryParam("search", "React")}>Update Query</button>
+      <button onClick={() => updateQueryParams({ page: 2, filter: "active" })}>Set Multiple Params</button>
+      <button onClick={() => updateRouteState({ customState: "new" })}>Update State</button>
+    </div>
+  );
+};
+```
+
+---
+
 ## License
 This hook is open-source and free to use in any project.
 
