@@ -16,7 +16,7 @@ A custom React hook for fetching data with support for authentication, request c
 You can download and use the `useFetch` hook using the following command:
 
 ```sh
-npx shx curl -o src/hooks/useFetch.js "https://raw.githubusercontent.com/ritik-1721/custom-hooks/main/hooks/useFetch.js"
+curl -o src/hooks/useFetch.js "https://raw.githubusercontent.com/ritik-1721/custom-hooks/main/hooks/useFetch.js"
 ```
 
 Simply copy the `useFetch.js` file into your project and import it where needed.
@@ -177,7 +177,7 @@ npm install react-router-dom
 ```
 
 ```sh
-npx shx curl -o src/hooks/useQueryParams.js "https://raw.githubusercontent.com/ritik-1721/custom-hooks/main/hooks/useQueryParams.js"
+curl -o src/hooks/useQueryParams.js "https://raw.githubusercontent.com/ritik-1721/custom-hooks/main/hooks/useQueryParams.js"
 ```
 
 Simply copy the `useQueryParams.js` file into your project and import it where needed.
